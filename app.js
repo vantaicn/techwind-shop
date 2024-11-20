@@ -49,9 +49,9 @@ app.use('/auth', authRouter);
 app.use('/products', productsRouter);
 
 //Listen to server
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server running on http://localhost:${PORT}`);
+// });
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
