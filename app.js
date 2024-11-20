@@ -15,7 +15,7 @@ const { seedDatabase } = require('./controllers/productController');
 require('dotenv').config();
 
 var app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 // Connect to MongoDB
 connectDB();
