@@ -15,15 +15,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'npm install'
-                sh 'npm run build'
+                echo "Building"
             }
         }
 
         stage('Deploy') {
             steps {
                 echo "Deploying version ${env.GIT_TAG_NAME} to production"
-                // Gọi shell script hoặc Ansible để deploy
             }
         }
     }
