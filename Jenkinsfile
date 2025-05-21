@@ -5,11 +5,11 @@ pipeline {
         stage('Check Tag') {
             when {
                 expression {
-                    return env.GIT_TAG_NAME?.startsWith('v') // chỉ chạy khi là tag
+                    return env.TAG_NAME?.startsWith('v') // chỉ chạy khi là tag
                 }
             }
             steps {
-                echo "Deploying release ${env.GIT_TAG_NAME}"
+                echo "Deploying release ${env.TAG_NAME}"
             }
         }
 
@@ -21,7 +21,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo "Deploying version ${env.GIT_TAG_NAME} to production"
+                echo "Deploying version ${env.TAG_NAME} to production"
             }
         }
     }
